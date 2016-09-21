@@ -1,0 +1,47 @@
+{
+    "title": "Create Activities",
+    "jsonPage": "viewActivities",
+    "desciption": "",
+    "pageType": "create",
+    "urlFields": ["Destination"],
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Image",
+        "type": "image",
+        "option":"single",
+        "size": "351 X 239",
+        "tableRef": "image1",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Image",
+        "type": "image",
+        "option":"single",
+        "size": "351 X 239",
+        "tableRef": "image2",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitActivities"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewActivities'})"
+    }],
+
+    "apiCall": {
+        "url": "Destination/saveActivities"
+    }
+}

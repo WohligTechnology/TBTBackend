@@ -48,5 +48,30 @@
     "preApi": {
         "url": "WhatsHot/getOne",
         "params": "_id"
-    }
+    },
+    "sidemenu": [{
+          "name": "WhatsHot",
+          "action": "sidemenuRedirect",
+          "jsonPage": "editWhatsHot",
+          "fieldsToSend": [1],
+          "callFindOne": "WhatsHot/getOne"
+      }, {
+          "name": "Images",
+          "action": "sidemenuRedirect",
+          "jsonPage": "viewImages",
+          "fieldsToSend": [1],
+          "callFindOne": "WhatsHot/getImages"
+      },{
+          "name": "Video",
+          "action": "sidemenuRedirect",
+          "jsonPage": "viewVideos",
+          "fieldsToSend": [1],
+          "callFindOne": "WhatsHot/getVideos"
+      }, {
+          "name": "Pricing",
+          "action": "sidemenuRedirect",
+          "jsonPage": "viewPricing",
+          "fieldsToSend": [1],
+          "callFindOne": "WhatsHot/getPricing"
+      }]
 }
