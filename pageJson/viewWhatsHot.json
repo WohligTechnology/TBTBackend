@@ -11,6 +11,10 @@
         "type": "image",
         "isSort": "",
         "tableRef": "banner"
+    },{
+        "name": "CruiseRate",
+        "isSort": "",
+        "tableRef": "cruiserate"
     }],
     "action": [{
         "name": "edit",

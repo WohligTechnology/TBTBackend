@@ -1,16 +1,15 @@
 {
-    "title": "Destination",
+    "title": "City",
     "desciption": "",
     "pageType": "view",
     "fields": [{
-        "name": "Name",
+        "name": "CityName",
         "isSort": "",
-        "tableRef": "name"
+        "tableRef": "cityName"
     },{
-        "name": "Banner",
-        "type": "image",
+        "name": "Country",
         "isSort": "",
-        "tableRef": "banner"
+        "tableRef": "country"
     },{
         "name": "Image",
         "type": "image",
@@ -18,7 +17,6 @@
         "tableRef": "image"
     },{
         "name": "Status",
-        "type":"status",
         "isSort": "",
         "tableRef": "status"
     }],
@@ -27,25 +25,25 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editDestination",
+        "jsonPage": "editCity",
         "fieldsToSend": ["_id"],
-        "callFindOne": "Destination/getone"
+        "callFindOne": "City/getone"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
         "title": "Delete Tag",
-        "content": "Are you sure you want to delete Tag?",
-        "api": "Destination/delete",
+        "content": "Are you sure you want to delete City?",
+        "api": "City/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "Destination/search",
+        "url": "City/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createDestination'})"
+    "createButtonState": "page({jsonName:'createCity'})"
 }

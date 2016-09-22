@@ -1,5 +1,5 @@
 {
-    "title": "Edit Accomodation",
+    "title": "Edit Blog",
     "jsonPage": "viewAccomodation",
     "desciption": "",
     "pageType": "edit",
@@ -38,7 +38,8 @@
         "name": "submit",
         "action": "submitOneAccomodation"
     }, {
-        "name": "cancel"
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewAccomodation'})"
     }],
     "apiCall": {
         "url": "Destination/saveAccomodation",

@@ -6,7 +6,7 @@
     "urlFields": ["_id"],
     "fields": [{
         "name": "Id",
-        "type": "text",
+        "type": "hidden",
         "tableRef": "_id",
         "placeholder": "Enter name",
         "id": "input1",
@@ -17,7 +17,7 @@
         "name": "Image",
         "type": "image",
         "option":"single",
-        "size": "351 X 239",
+        "size": "1109 x 417",
         "tableRef": "image",
         "placeholder": "Enter name",
         "id": "input1",

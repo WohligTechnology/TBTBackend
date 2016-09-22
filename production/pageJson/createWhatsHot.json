@@ -21,22 +21,6 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
-        "name": "Cruise Rate",
-        "type": "text",
-        "tableRef": "cruiserate",
-        "placeholder": "Enter Cruise Rate",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    },{
-        "name": "Date",
-        "type": "date",
-        "tableRef": "date",
-        "placeholder": "Enter Date",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
     }],
     "action": [{
         "name": "submit",

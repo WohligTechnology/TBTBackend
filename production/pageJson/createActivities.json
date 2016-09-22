@@ -32,23 +32,6 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
-        "name": "Type",
-        "type": "select",
-        "tableRef": "type",
-        "placeholder": "Enter Type",
-        "id": "input3",
-        "validation": ["required", "trim", "unique"],
-        "url": [{
-            "value": "all",
-            "name": "all"
-        }, {
-            "value": "day",
-            "name": "day"
-        },{
-            "value": "night",
-            "name": "night"
-        }]
     }],
     "action": [{
         "name": "submit",

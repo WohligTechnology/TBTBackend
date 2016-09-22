@@ -1,6 +1,6 @@
 {
-    "title": "Edit What'sHot",
-    "jsonPage": "viewWhatsHot",
+    "title": "Edit Pricing",
+    "jsonPage": "viewPricing",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -13,58 +13,56 @@
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "_id"
-    }, {
-        "name": "name",
+    },{
+        "name": "Paxcabin1",
         "type": "text",
-        "tableRef": "name",
-        "placeholder": "Enter name",
+        "tableRef": "paxcabin1",
+        "placeholder": "Enter Paxcabin1",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "name"
+        "model": "paxcabin1"
     },{
-        "name": "Banner",
-        "type": "image",
-        "tableRef": "banner",
-        "model": "banner",
-        "option": "single",
-        "size":"1920 X 963",
-        "placeholder": "Enter Image",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    },{
-        "name": "Cruise Rate",
+        "name": "Paxcabin2",
         "type": "text",
-        "tableRef": "cruiserate",
-        "model": "cruiserate",
-        "placeholder": "Enter Cruise Rate",
+        "tableRef": "paxcabin2",
+        "placeholder": "Enter Paxcabin2",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": ""
+        "url": "",
+        "model": "paxcabin2"
     },{
-        "name": "Date",
-        "type": "date",
-        "tableRef": "date",
-        "model": "date",
-        "placeholder": "Enter Date",
+        "name": "Paxcabin3",
+        "type": "text",
+        "tableRef": "paxcabin3",
+        "placeholder": "Enter Paxcabin3",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": ""
+        "url": "",
+        "model": "paxcabin3"
+    },{
+        "name": "Text",
+        "type": "text",
+        "tableRef": "text",
+        "placeholder": "Enter Text",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "text"
     }],
     "action": [{
         "name": "submit",
-        "action": "submitWhatsNew"
+        "action": "submitPricing"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewWhatsHot'})"
+        "stateName": "page({jsonName:'viewPricing'})"
     }],
     "apiCall": {
-        "url": "WhatsHot/save",
+        "url": "WhatsHot/savePricing",
         "params": "_id"
     },
     "preApi": {
-        "url": "WhatsHot/getOne",
+        "url": "WhatsHot/getOnePricing",
         "params": "_id"
     },
     "sidemenu": [{
@@ -76,7 +74,7 @@
       }, {
           "name": "Images",
           "action": "sidemenuRedirect",
-          "jsonPage": "viewImages",
+          "jsonPage": "viewPricing",
           "fieldsToSend": [1],
           "callFindOne": "WhatsHot/getImages"
       },{

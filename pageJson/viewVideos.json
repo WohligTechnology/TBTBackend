@@ -1,13 +1,18 @@
 {
-    "title": "Images",
+    "title": "Videos",
     "desciption": "",
     "pageType": "view",
     "sendIdWithCreate": true,
     "fields": [{
-        "name": "Image",
+        "name": "URL",
+        "type": "text",
+        "isSort": "",
+        "tableRef": "url"
+    },{
+        "name": "Thumbnail",
         "type": "image",
         "isSort": "",
-        "tableRef": "image"
+        "tableRef": "thumbnail"
     },{
         "name": "Status",
         "isSort": "",
@@ -18,27 +23,27 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editImages",
+        "jsonPage": "editVideos",
         "fieldsToSend": ["_id"],
-        "callFindOne": "WhatsHot/getOneImages"
+        "callFindOne": "WhatsHot/getOneVideos"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Images",
-        "content": "Are you sure you want to delete Images?",
-        "api": "WhatsHot/deleteImages",
+        "title": "Delete Videos",
+        "content": "Are you sure you want to delete Videos?",
+        "api": "WhatsHot/deleteVideos",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "WhatsHot/getImages",
+        "url": "WhatsHot/getVideos",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createImages'})",
+    "createButtonState": "page({jsonName:'createVideos'})",
     "sidemenu": [{
           "name": "WhatsHot",
           "action": "sidemenuRedirect",

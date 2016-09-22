@@ -1,6 +1,6 @@
 {
-    "title": "Edit HomeSlider",
-    "jsonPage": "viewHomeSlider",
+    "title": "Edit Videos",
+    "jsonPage": "viewVideos",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -14,17 +14,6 @@
         "url": "",
         "model": "_id"
     },{
-        "name": "Image",
-        "type": "image",
-        "tableRef": "image",
-        "option": "single",
-        "size": "1308 X 456",
-        "placeholder": "Enter Image",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "image"
-    },{
         "name": "URL",
         "type": "text",
         "tableRef": "url",
@@ -33,6 +22,17 @@
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "url"
+    },{
+        "name": "Thumbnail",
+        "type": "image",
+        "option":"single",
+        "size": "351 X 239",
+        "tableRef": "thumbnail",
+        "placeholder": "Enter Thumbnail Image",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "thumbnail"
     },{
         "name": "Status",
         "type": "select",
@@ -49,20 +49,19 @@
             "name": "Disable"
         }]
     }],
-
     "action": [{
         "name": "submit",
-        "action": "submitHomeSlider"
+        "action": "submitVideos"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewHomeSlider'})"
+        "stateName": "page({jsonName:'viewVideos'})"
     }],
     "apiCall": {
-        "url": "HomeSlider/save",
+        "url": "WhatsHot/saveVideos",
         "params": "_id"
     },
     "preApi": {
-        "url": "HomeSlider/getOne",
+        "url": "WhatsHot/getOneVideos",
         "params": "_id"
     }
 }

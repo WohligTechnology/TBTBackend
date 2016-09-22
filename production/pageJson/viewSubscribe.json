@@ -13,7 +13,7 @@
         "color": "red",
         "action": "apiCallConfirm",
         "title": "Delete Tag",
-        "content": "Are you sure you want to delete Tag?",
+        "content": "Are you sure you want to delete Subscribe?",
         "api": "Subscribe/delete",
         "fieldsToSend": [{
             "name": "_id",
@@ -21,7 +21,7 @@
         }]
     }],
     "apiCall": {
-        "url": "Subscribe/getLimited",
+        "url": "Subscribe/search",
         "params": ""
     },
     "createButtonState": "page({jsonName:'createSubscribe'})"

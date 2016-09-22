@@ -1,6 +1,6 @@
 {
-    "title": "Edit HomeSlider",
-    "jsonPage": "viewHomeSlider",
+    "title": "Edit City",
+    "jsonPage": "viewCity",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -14,25 +14,43 @@
         "url": "",
         "model": "_id"
     },{
+        "name": "City Name",
+        "type": "text",
+        "tableRef": "cityName",
+        "placeholder": "Enter City Name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "cityName"
+    },{
+        "name": "Country Name",
+        "type": "text",
+        "tableRef": "country",
+        "placeholder": "Enter City Name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "country"
+    }, {
+        "name": "Content",
+        "type": "tinymce",
+        "tableRef": "content",
+        "model": "content",
+        "placeholder": "Enter Description",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
         "name": "Image",
         "type": "image",
         "tableRef": "image",
+        "model": "image",
         "option": "single",
-        "size": "1308 X 456",
+        "size":"1920 X 963",
         "placeholder": "Enter Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "image"
-    },{
-        "name": "URL",
-        "type": "text",
-        "tableRef": "url",
-        "placeholder": "Enter URL",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "url"
+        "url": ""
     },{
         "name": "Status",
         "type": "select",
@@ -49,20 +67,19 @@
             "name": "Disable"
         }]
     }],
-
     "action": [{
         "name": "submit",
-        "action": "submitHomeSlider"
+        "action": "submitCIty"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewHomeSlider'})"
+        "stateName": "page({jsonName:'viewCity'})"
     }],
     "apiCall": {
-        "url": "HomeSlider/save",
+        "url": "City/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "HomeSlider/getOne",
+        "url": "City/getOne",
         "params": "_id"
     }
 }

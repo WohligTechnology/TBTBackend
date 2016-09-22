@@ -1,19 +1,10 @@
 {
-    "title": "Create HomeSlider",
-    "jsonPage": "viewHomeSlider",
+    "title": "Create Videos",
+    "jsonPage": "viewVideos",
     "desciption": "",
     "pageType": "create",
+    "urlFields": ["WhatsHot"],
     "fields": [{
-        "name": "Image",
-        "type": "image",
-        "tableRef": "image",
-        "option": "single",
-        "size": "1308 X 456",
-        "placeholder": "Enter Image",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    },{
         "name": "URL",
         "type": "text",
         "tableRef": "url",
@@ -21,7 +12,17 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    }, {
+    },{
+        "name": "Thumbnail",
+        "type": "image",
+        "option":"single",
+        "size": "351 X 239",
+        "tableRef": "thumbnail",
+        "placeholder": "Enter Thumbnail Image",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
         "name": "Status",
         "type": "select",
         "tableRef": "status",
@@ -38,13 +39,13 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitUser"
+        "action": "submitVideos"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewHomeSlider'})"
+        "stateName": "page({jsonName:'viewVideos'})"
     }],
 
     "apiCall": {
-        "url": "HomeSlider/save"
+        "url": "WhatsHot/saveVideos"
     }
 }

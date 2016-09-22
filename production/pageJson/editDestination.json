@@ -1,6 +1,6 @@
 {
-    "title": "Edit Activities",
-    "jsonPage": "viewActivities",
+    "title": "Edit Destination",
+    "jsonPage": "viewDestination",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -14,68 +14,85 @@
         "url": "",
         "model": "_id"
     },{
-        "name": "Hotel Name",
+        "name": "Name",
         "type": "text",
         "tableRef": "name",
-        "placeholder": "Enter name",
+        "placeholder": "Enter Name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "name"
     },{
-        "name": "Image",
+        "name": "Banner",
         "type": "image",
-        "option":"single",
-        "size": "351 X 239",
-        "tableRef": "image1",
-        "placeholder": "Enter name",
+        "size": "429 X 401",
+        "tableRef": "banner",
+        "option": "single",
+        "placeholder": "Enter Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "image1"
+        "model": "banner"
     },{
         "name": "Image",
         "type": "image",
-        "option":"single",
-        "size": "351 X 239",
-        "tableRef": "image2",
-        "placeholder": "Enter name",
+        "size": "429 X 401",
+        "tableRef": "image",
+        "option": "single",
+        "placeholder": "Enter Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "image2"
+        "model": "image"
+    },{
+        "name": "City",
+        "type": "selectFromTable",
+        "option":"single",
+        "tableRef": "city",
+        "placeholder": "Enter Category-Name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "City/search",
+        "model": "city"
     },{
         "name": "Type",
-        "type": "select",
+        "type": "text",
         "tableRef": "type",
         "placeholder": "Enter Type",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "type"
+    },{
+        "name": "Status",
+        "type": "select",
+        "tableRef": "status",
+        "placeholder": "Enter status",
         "id": "input3",
-        "model": "type",
+        "model": "status",
         "validation": ["required", "trim", "unique"],
         "url": [{
-            "value": "all",
-            "name": "all"
+            "value": true,
+            "name": "Enable"
         }, {
-            "value": "day",
-            "name": "day"
-        },{
-            "value": "night",
-            "name": "night"
+            "value": false,
+            "name": "Disable"
         }]
     }],
+
     "action": [{
         "name": "submit",
-        "action": "submitOneActivities"
+        "action": "submitDestination"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewActivities'})"
+        "stateName": "page({jsonName:'viewDestination'})"
     }],
     "apiCall": {
-        "url": "Destination/saveActivities",
+        "url": "Destination/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "Destination/getOneActivities",
+        "url": "Destination/getOne",
         "params": "_id"
     },
     "sidemenu": [{

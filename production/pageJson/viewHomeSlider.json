@@ -1,24 +1,15 @@
 {
-    "title": "Destination",
+    "title": "HomeSlider",
     "desciption": "",
     "pageType": "view",
     "fields": [{
-        "name": "Name",
-        "isSort": "",
-        "tableRef": "name"
-    },{
-        "name": "Banner",
-        "type": "image",
-        "isSort": "",
-        "tableRef": "banner"
-    },{
         "name": "Image",
         "type": "image",
         "isSort": "",
         "tableRef": "image"
     },{
         "name": "Status",
-        "type":"status",
+        "type": "status",
         "isSort": "",
         "tableRef": "status"
     }],
@@ -27,25 +18,25 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editDestination",
+        "jsonPage": "editHomeSlider",
         "fieldsToSend": ["_id"],
-        "callFindOne": "Destination/getone"
+        "callFindOne": "HomeSlider/getone"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Tag",
-        "content": "Are you sure you want to delete Tag?",
-        "api": "Destination/delete",
+        "title": "Delete HomeSlider",
+        "content": "Are you sure you want to delete HomeSlider?",
+        "api": "HomeSlider/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "Destination/search",
+        "url": "HomeSlider/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createDestination'})"
+    "createButtonState": "page({jsonName:'createHomeSlider'})"
 }

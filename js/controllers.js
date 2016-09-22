@@ -21,7 +21,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             // });
             if (data.value === true) {
                 $state.go("page", {
-                    jsonName: "viewBlog"
+                    jsonName: "viewHomeSlider"
                 });
                 $.jStorage.set("user", data);
             } else if (data.value === false) {
@@ -176,18 +176,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             });
             // get select fields dropdown
             _.each($scope.json.fields, function(n) {
+              console.log("json f",n);
                 if (n.type == "selectFromTable") {
                     NavigationService.getDropDown(n.url, function(data) {
-                        console.log(data);
+                        console.log("aaaaaaaaa",data.data.results);
                         n.dropdownvalues = [];
                         if (data) {
-                            for (var i = 0; i < data.data.length; i++) {
+                            for (var i = 0; i < data.data.results.length; i++) {
                                 var dropdown = {};
-                                dropdown._id = data.data[i]._id;
+                                dropdown._id = data.data.results[i]._id;
                                 if (!n.dropDownName) {
-                                    dropdown.name = data.data[i].name;
+                                    dropdown.name = data.data.results[i].name;
+                                    console.log("innn", n);
                                 } else {
-                                    dropdown.name = data.data[i][n.dropDownName];
+                                    dropdown.name = data.data.results[i][n.dropDownName];
+                                    console.log("else", n);
                                 }
                                 n.dropdownvalues.push(dropdown);
                             }
@@ -223,13 +226,13 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                         console.log(data);
                         n.dropdownvalues = [];
                         if (data) {
-                            for (var i = 0; i < data.data.length; i++) {
+                            for (var i = 0; i < data.data.results.length; i++) {
                                 var dropdown = {};
-                                dropdown._id = data.data[i]._id;
+                                dropdown._id = data.data.results[i]._id;
                                 if (!n.dropDownName) {
-                                    dropdown.name = data.data[i].name;
+                                    dropdown.name = data.data.results[i].name;
                                 } else {
-                                    dropdown.name = data.data[i][n.dropDownName];
+                                    dropdown.name = data.data.results[i][n.dropDownName];
                                 }
                                 n.dropdownvalues.push(dropdown);
                             }

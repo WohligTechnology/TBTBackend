@@ -2,7 +2,6 @@
     "title": "Images",
     "desciption": "",
     "pageType": "view",
-    "sendIdWithCreate": true,
     "fields": [{
         "name": "Image",
         "type": "image",
@@ -28,7 +27,7 @@
         "action": "apiCallConfirm",
         "title": "Delete Images",
         "content": "Are you sure you want to delete Images?",
-        "api": "WhatsHot/deleteImages",
+        "api": "WhatsHot/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
@@ -38,7 +37,7 @@
         "url": "WhatsHot/getImages",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createImages'})",
+    "createButtonState": "page({jsonName:'createWhatsHot'})",
     "sidemenu": [{
           "name": "WhatsHot",
           "action": "sidemenuRedirect",

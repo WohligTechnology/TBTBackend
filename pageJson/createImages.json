@@ -1,27 +1,20 @@
 {
-    "title": "Create HomeSlider",
-    "jsonPage": "viewHomeSlider",
+    "title": "Create Images",
+    "jsonPage": "viewImages",
     "desciption": "",
     "pageType": "create",
+    "urlFields": ["WhatsHot"],
     "fields": [{
         "name": "Image",
         "type": "image",
+        "option":"single",
+        "size": "1109 x 417",
         "tableRef": "image",
-        "option": "single",
-        "size": "1308 X 456",
         "placeholder": "Enter Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
-        "name": "URL",
-        "type": "text",
-        "tableRef": "url",
-        "placeholder": "Enter URL",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
         "name": "Status",
         "type": "select",
         "tableRef": "status",
@@ -38,13 +31,13 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitUser"
+        "action": "submitImages"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewHomeSlider'})"
+        "stateName": "page({jsonName:'viewImages'})"
     }],
 
     "apiCall": {
-        "url": "HomeSlider/save"
+        "url": "WhatsHot/saveImages"
     }
 }

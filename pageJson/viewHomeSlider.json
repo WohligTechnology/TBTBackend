@@ -12,6 +12,10 @@
         "type": "status",
         "isSort": "",
         "tableRef": "status"
+    },{
+        "name":"URL",
+        "isSort": "",
+        "tableRef": "url"
     }],
     "action": [{
         "name": "edit",

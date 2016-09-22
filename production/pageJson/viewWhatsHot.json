@@ -1,5 +1,5 @@
 {
-    "title": "Destination",
+    "title": "What's Hot",
     "desciption": "",
     "pageType": "view",
     "fields": [{
@@ -11,41 +11,31 @@
         "type": "image",
         "isSort": "",
         "tableRef": "banner"
-    },{
-        "name": "Image",
-        "type": "image",
-        "isSort": "",
-        "tableRef": "image"
-    },{
-        "name": "Status",
-        "type":"status",
-        "isSort": "",
-        "tableRef": "status"
     }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editDestination",
+        "jsonPage": "editWhatsHot",
         "fieldsToSend": ["_id"],
-        "callFindOne": "Destination/getone"
+        "callFindOne": "WhatsHot/getone"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
         "title": "Delete Tag",
-        "content": "Are you sure you want to delete Tag?",
-        "api": "Destination/delete",
+        "content": "Are you sure you want to delete WhatsHot?",
+        "api": "WhatsHot/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "Destination/search",
+        "url": "WhatsHot/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createDestination'})"
+    "createButtonState": "page({jsonName:'createWhatsHot'})"
 }
