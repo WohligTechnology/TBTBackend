@@ -14,7 +14,7 @@
     },{
         "name": "Banner",
         "type": "image",
-        "size": "429 X 401",
+        "size": "1559 x 586",
         "tableRef": "image",
         "option": "single",
         "placeholder": "Enter Image",
