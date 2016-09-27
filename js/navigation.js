@@ -1,7 +1,6 @@
 var adminurl = "http://104.155.129.33:87/";
 // var adminurl = "http://localhost:1337/";
-// var adminurl = "http://192.168.0.111:1337/";
-//var adminurl = "http://192.168.1.116:1337/";
+
 var uploadurl = adminurl + "upload/";
 var imgpath = uploadurl + "readFile/";
 var navigationservice = angular.module('navigationservice', [])
