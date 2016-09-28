@@ -33,6 +33,11 @@ var navigationservice = angular.module('navigationservice', [])
         classis: "active",
         link: "#/page/viewSubscribe",
         subnav: []
+    },{
+        name: "Media",
+        classis: "active",
+        link: "#/page/viewMedia",
+        subnav: []
     }];
 
     return {
