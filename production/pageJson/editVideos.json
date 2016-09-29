@@ -1,6 +1,6 @@
 {
-    "title": "Edit Sub-Category",
-    "jsonPage": "viewBeforeAfter",
+    "title": "Edit Videos",
+    "jsonPage": "viewVideos",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -13,25 +13,27 @@
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "_id"
-    }, {
-        "name": "Name",
+    },{
+        "name": "URL",
         "type": "text",
-        "tableRef": "name",
-        "model": "name",
-        "placeholder": "Enter Name",
+        "tableRef": "url",
+        "placeholder": "Enter URL",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
-        "name": "Description",
-        "type": "tinymceImage",
-        "tableRef": "description",
-        "model": "description",
-        "placeholder": "Enter Description",
+        "url": "",
+        "model": "url"
+    },{
+        "name": "Thumbnail",
+        "type": "image",
+        "option":"single",
+        "size": "351 X 239",
+        "tableRef": "thumbnail",
+        "placeholder": "Enter Thumbnail Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
+        "url": "",
+        "model": "thumbnail"
+    },{
         "name": "Status",
         "type": "select",
         "tableRef": "status",
@@ -49,17 +51,17 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitBeforeAfter"
+        "action": "submitVideos"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewBeforeAfter'})"
+        "stateName": "page({jsonName:'viewVideos'})"
     }],
     "apiCall": {
-        "url": "BeforeAfter/savedata",
+        "url": "WhatsHot/saveVideos",
         "params": "_id"
     },
     "preApi": {
-        "url": "BeforeAfter/getOne",
+        "url": "WhatsHot/getOneVideos",
         "params": "_id"
     }
 }

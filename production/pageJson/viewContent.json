@@ -1,5 +1,5 @@
 {
-    "title": "View Activities",
+    "title": "View Content",
     "desciption": "",
     "sendIdWithCreate": true,
     "pageType": "view",
@@ -8,43 +8,38 @@
         "type": "text",
         "isSort": "",
         "tableRef": "name"
-    }, {
-        "name": "Image1",
-        "type": "image",
-        "isSort": "",
-        "tableRef": "image1"
     },{
-        "name": "Image2",
-        "type": "image",
+        "name": "Status",
+        "type": "status",
         "isSort": "",
-        "tableRef": "image2"
+        "tableRef": "status"
     }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editActivities",
+        "jsonPage": "editContent",
         "fieldsToSend": ["_id"],
-        "callFindOne": "Destination/getOneActivities"
+        "callFindOne": "Destination/getOneContent"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Activities",
-        "content": "Are you sure you want to delete Activities?",
-        "api": "Destination/deleteActivities",
+        "title": "Delete Content",
+        "content": "Are you sure you want to delete Content?",
+        "api": "Destination/deleteContent",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "Destination/getActivities",
+        "url": "Destination/getContent",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createActivities'})",
+    "createButtonState": "page({jsonName:'createContent'})",
     "sidemenu": [{
           "name": "Destination",
           "action": "sidemenuRedirect",

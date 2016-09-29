@@ -26,7 +26,7 @@
         "name": "Image",
         "type": "image",
         "option":"single",
-        "size": "351 X 239",
+        "size": "413 x 413",
         "tableRef": "image1",
         "placeholder": "Enter name",
         "id": "input1",
@@ -37,13 +37,31 @@
         "name": "Image",
         "type": "image",
         "option":"single",
-        "size": "351 X 239",
+        "size": "413 x 413",
         "tableRef": "image2",
         "placeholder": "Enter name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "image2"
+    },{
+        "name": "Type",
+        "type": "select",
+        "tableRef": "type",
+        "placeholder": "Enter Type",
+        "id": "input3",
+        "model": "type",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "all",
+            "name": "all"
+        }, {
+            "value": "day",
+            "name": "day"
+        },{
+            "value": "night",
+            "name": "night"
+        }]
     }],
     "action": [{
         "name": "submit",
@@ -59,24 +77,5 @@
     "preApi": {
         "url": "Destination/getOneActivities",
         "params": "_id"
-    },
-    "sidemenu": [{
-          "name": "Destination",
-          "action": "sidemenuRedirect",
-          "jsonPage": "editDestination",
-          "fieldsToSend": [1],
-          "callFindOne": "Destination/getOne"
-      }, {
-          "name": "Accomodation",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewAccomodation",
-          "fieldsToSend": [1],
-          "callFindOne": "Destination/getAccomodation"
-      }, {
-          "name": "Activities",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewActivities",
-          "fieldsToSend": [1],
-          "callFindOne": "Destination/getActivities"
-      }]
+    }
 }

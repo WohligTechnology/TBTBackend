@@ -8,7 +8,7 @@
         "type": "image",
         "tableRef": "image",
         "option": "single",
-        "size": "1099 X 378",
+        "size": "1920 x 670",
         "placeholder": "Enter Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],

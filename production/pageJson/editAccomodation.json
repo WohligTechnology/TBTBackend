@@ -1,5 +1,5 @@
 {
-    "title": "Edit Blog",
+    "title": "Edit Accomodation",
     "jsonPage": "viewAccomodation",
     "desciption": "",
     "pageType": "edit",
@@ -26,7 +26,7 @@
         "name": "Image",
         "type": "image",
         "option":"single",
-        "size": "351 X 239",
+        "size": "413 x 413",
         "tableRef": "image",
         "placeholder": "Enter name",
         "id": "input1",
@@ -38,8 +38,7 @@
         "name": "submit",
         "action": "submitOneAccomodation"
     }, {
-        "name": "cancel",
-        "stateName": "page({jsonName:'viewAccomodation'})"
+        "name": "cancel"
     }],
     "apiCall": {
         "url": "Destination/saveAccomodation",

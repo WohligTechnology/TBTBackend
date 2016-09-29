@@ -8,6 +8,10 @@
         "isSort": "",
         "tableRef": "image"
     },{
+        "name":"URL",
+        "isSort": "",
+        "tableRef": "url"
+    },{
         "name": "Status",
         "type": "status",
         "isSort": "",

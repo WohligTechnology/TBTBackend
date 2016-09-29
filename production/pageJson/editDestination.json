@@ -25,7 +25,7 @@
     },{
         "name": "Banner",
         "type": "image",
-        "size": "429 X 401",
+        "size": "1559 x 586",
         "tableRef": "banner",
         "option": "single",
         "placeholder": "Enter Image",
@@ -45,24 +45,40 @@
         "url": "",
         "model": "image"
     },{
+        "name": "Video Url",
+        "type": "text",
+        "tableRef": "video",
+        "placeholder": "Enter URL",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model":"video"
+    },{
         "name": "City",
         "type": "selectFromTable",
         "option":"single",
         "tableRef": "city",
+        "dropDownName":"cityName",
+        "model":"city",
         "placeholder": "Enter Category-Name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": "City/search",
-        "model": "city"
+        "url": "City/search"
     },{
         "name": "Type",
-        "type": "text",
+        "type": "select",
         "tableRef": "type",
         "placeholder": "Enter Type",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "type"
+        "model": "type",
+        "url": [{
+            "value": "Popular Destination",
+            "name": "Popular Destination"
+        }, {
+            "value": "Popular Attraction",
+            "name": "Popular Attraction"
+        }]
     },{
         "name": "Status",
         "type": "select",
@@ -113,5 +129,11 @@
           "jsonPage": "viewActivities",
           "fieldsToSend": [1],
           "callFindOne": "Destination/getActivities"
+      },{
+          "name": "Content",
+          "action": "sidemenuRedirect",
+          "jsonPage": "viewContent",
+          "fieldsToSend": [1],
+          "callFindOne": "Destination/getContent"
       }]
 }

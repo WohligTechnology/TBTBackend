@@ -16,7 +16,7 @@
         "name": "Image",
         "type": "image",
         "option":"single",
-        "size": "351 X 239",
+        "size": "413 x 413",
         "tableRef": "image1",
         "placeholder": "Enter name",
         "id": "input1",
@@ -26,12 +26,29 @@
         "name": "Image",
         "type": "image",
         "option":"single",
-        "size": "351 X 239",
+        "size": "413 x 413",
         "tableRef": "image2",
         "placeholder": "Enter name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
+    },{
+        "name": "Type",
+        "type": "select",
+        "tableRef": "type",
+        "placeholder": "Enter Type",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "all",
+            "name": "all"
+        }, {
+            "value": "day",
+            "name": "day"
+        },{
+            "value": "night",
+            "name": "night"
+        }]
     }],
     "action": [{
         "name": "submit",

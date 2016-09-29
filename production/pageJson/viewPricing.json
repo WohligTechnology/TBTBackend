@@ -1,44 +1,58 @@
 {
-    "title": "Images",
+    "title": "Pricing",
     "desciption": "",
     "pageType": "view",
     "sendIdWithCreate": true,
     "fields": [{
-        "name": "Image",
-        "type": "image",
+        "name": "Paxcabin1",
+        "type":"text",
         "isSort": "",
-        "tableRef": "image"
-    },{
-        "name": "Status",
+        "tableRef": "paxcabin1"
+    },
+    {
+        "name": "Paxcabin2",
+        "type":"text",
         "isSort": "",
-        "tableRef": "status"
+        "tableRef": "paxcabin2"
+    },
+    {
+        "name": "Paxcabin3",
+        "type":"text",
+        "isSort": "",
+        "tableRef": "paxcabin3"
+    },
+    {
+        "name": "Text",
+        "type":"text",
+        "isSort": "",
+        "tableRef": "text"
     }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editImages",
+        "jsonPage": "editPricing",
         "fieldsToSend": ["_id"],
-        "callFindOne": "WhatsHot/getOneImages"
+        "callFindOne": "WhatsHot/getOnePricing"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Images",
-        "content": "Are you sure you want to delete Images?",
-        "api": "WhatsHot/deleteImages",
+        "title": "Delete Pricing",
+        "content": "Are you sure you want to delete Pricing?",
+        "api": "WhatsHot/deletePricing",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "WhatsHot/getImages",
+        "url": "WhatsHot/getPricing",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createImages'})",
+    "createButtonState": "page({jsonName:'createPricing'})",
     "sidemenu": [{
           "name": "WhatsHot",
           "action": "sidemenuRedirect",

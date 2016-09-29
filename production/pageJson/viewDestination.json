@@ -18,6 +18,7 @@
         "tableRef": "image"
     },{
         "name": "Status",
+        "type":"status",
         "isSort": "",
         "tableRef": "status"
     }],
