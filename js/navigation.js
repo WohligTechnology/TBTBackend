@@ -1,4 +1,4 @@
-var adminurl = "http://104.155.129.33:87/";
+var adminurl = "http://104.155.129.33:1337/";
 // var adminurl = "http://localhost:1337/";
 
 var uploadurl = adminurl + "upload/";

@@ -58,6 +58,12 @@
           "jsonPage": "viewActivities",
           "fieldsToSend": [1],
           "callFindOne": "Destination/getActivities"
-      }]
+      },{
+            "name": "Content",
+            "action": "sidemenuRedirect",
+            "jsonPage": "viewContent",
+            "fieldsToSend": [1],
+            "callFindOne": "Destination/getContent"
+        }]
 
 }

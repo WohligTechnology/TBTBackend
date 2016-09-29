@@ -22,7 +22,7 @@
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model":"name"
-    },{
+    }, {
         "name": "Description",
         "type": "tinymceImage",
         "tableRef": "description",
@@ -61,24 +61,5 @@
     "preApi": {
         "url": "Destination/getOneContent",
         "params": "_id"
-    },
-    "sidemenu": [{
-          "name": "Destination",
-          "action": "sidemenuRedirect",
-          "jsonPage": "editDestination",
-          "fieldsToSend": [1],
-          "callFindOne": "Destination/getOne"
-      }, {
-          "name": "Accomodation",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewAccomodation",
-          "fieldsToSend": [1],
-          "callFindOne": "Destination/getAccomodation"
-      }, {
-          "name": "Activities",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewActivities",
-          "fieldsToSend": [1],
-          "callFindOne": "Destination/getActivities"
-      }]
+    }
 }
