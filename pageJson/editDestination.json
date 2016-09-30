@@ -23,6 +23,14 @@
         "url": "",
         "model": "name"
     },{
+        "name": "Description",
+        "type": "tinymceImage",
+        "tableRef": "description",
+        "placeholder": "Enter Description",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
         "name": "Banner",
         "type": "image",
         "size": "1559 x 586",
@@ -73,6 +81,9 @@
         "validation": ["required", "trim", "unique"],
         "model": "type",
         "url": [{
+            "value": "None",
+            "name": "None"
+        },{
             "value": "Popular Destination",
             "name": "Popular Destination"
         }, {
@@ -123,12 +134,6 @@
           "jsonPage": "viewAccomodation",
           "fieldsToSend": [1],
           "callFindOne": "Destination/getAccomodation"
-      }, {
-          "name": "Activities",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewActivities",
-          "fieldsToSend": [1],
-          "callFindOne": "Destination/getActivities"
       },{
           "name": "Content",
           "action": "sidemenuRedirect",

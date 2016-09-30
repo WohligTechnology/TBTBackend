@@ -1,5 +1,5 @@
-var adminurl = "http://104.155.129.33:1337/";
-// var adminurl = "http://localhost:1337/";
+// var adminurl = "http://104.155.129.33:1337/";
+var adminurl = "http://localhost:1337/";
 
 var uploadurl = adminurl + "upload/";
 var imgpath = uploadurl + "readFile/";
@@ -10,6 +10,16 @@ var navigationservice = angular.module('navigationservice', [])
         name: "HomeSlider",
         classis: "active",
         link: "#/page/viewHomeSlider",
+        subnav: []
+    },{
+        name: "Activities",
+        classis: "active",
+        link: "#/page/viewActivities",
+        subnav: []
+    },{
+        name: "Package",
+        classis: "active",
+        link: "#/page/viewPackage",
         subnav: []
     },
     {
