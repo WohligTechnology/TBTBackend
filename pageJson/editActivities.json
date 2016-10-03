@@ -34,10 +34,10 @@
         "url": "",
         "model": "image1"
     },{
-        "name": "Image",
+        "name": "Above Image",
         "type": "image",
         "option":"single",
-        "size": "413 x 413",
+        "size": "1297 x 641",
         "tableRef": "image2",
         "placeholder": "Enter name",
         "id": "input1",
@@ -45,7 +45,7 @@
         "url": "",
         "model": "image2"
     },{
-        "name": "Type",
+        "name": "Category-Name",
         "type": "select",
         "tableRef": "type",
         "placeholder": "Enter Type",

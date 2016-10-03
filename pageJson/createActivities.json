@@ -23,7 +23,7 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
-        "name": "Image",
+        "name": "Above Image",
         "type": "image",
         "option":"single",
         "size": "1297 x 641",
@@ -33,7 +33,7 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
-        "name": "Type",
+        "name": "Category-Name",
         "type": "select",
         "tableRef": "type",
         "placeholder": "Enter Type",
