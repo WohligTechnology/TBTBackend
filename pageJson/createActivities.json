@@ -13,6 +13,14 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
+        "name": "Activity Description",
+        "type": "textarea",
+        "tableRef": "description",
+        "placeholder": "Enter Description",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
         "name": "Image",
         "type": "image",
         "option":"single",
@@ -59,6 +67,20 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "City/search"
+    },{
+        "name": "Status",
+        "type": "select",
+        "tableRef": "status",
+        "placeholder": "Enter status",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": true,
+            "name": "Enable"
+        }, {
+            "value": false,
+            "name": "Disable"
+        }]
     }],
     "action": [{
         "name": "submit",

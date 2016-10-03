@@ -26,7 +26,7 @@
         "action": "redirect",
         "jsonPage": "editActivities",
         "fieldsToSend": ["_id"],
-        "callFindOne": "Destination/getOneActivities"
+        "callFindOne": "Activities/getOne"
     }, {
         "name": "delete",
         "icon": "delete",
@@ -34,41 +34,15 @@
         "action": "apiCallConfirm",
         "title": "Delete Activities",
         "content": "Are you sure you want to delete Activities?",
-        "api": "Destination/deleteActivities",
+        "api": "Activities/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "Destination/getActivities",
+        "url": "Activities/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createActivities'})",
-    "sidemenu": [{
-          "name": "Destination",
-          "action": "sidemenuRedirect",
-          "jsonPage": "editDestination",
-          "fieldsToSend": [1],
-          "callFindOne": "Destination/getOne"
-      }, {
-          "name": "Accomodation",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewAccomodation",
-          "fieldsToSend": [1],
-          "callFindOne": "Destination/getAccomodation"
-      }, {
-          "name": "Activities",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewActivities",
-          "fieldsToSend": [1],
-          "callFindOne": "Destination/getActivities"
-      },{
-            "name": "Content",
-            "action": "sidemenuRedirect",
-            "jsonPage": "viewContent",
-            "fieldsToSend": [1],
-            "callFindOne": "Destination/getContent"
-        }]
-
+    "createButtonState": "page({jsonName:'createActivities'})"
 }

@@ -1,6 +1,6 @@
 {
-    "title": "Edit What'sHot",
-    "jsonPage": "viewWhatsHot",
+    "title": "Edit Package",
+    "jsonPage": "viewPackage",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -14,7 +14,7 @@
         "url": "",
         "model": "_id"
     }, {
-        "name": "name",
+        "name": "Package Name",
         "type": "text",
         "tableRef": "name",
         "placeholder": "Enter name",
@@ -23,26 +23,24 @@
         "url": "",
         "model": "name"
     },{
-        "name": "Banner",
-        "type": "image",
-        "tableRef": "banner",
-        "model": "banner",
-        "option": "single",
-        "size":"1920 X 963",
-        "placeholder": "Enter Image",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    },{
-        "name": "Cruise Rate",
+        "name": "Duration",
         "type": "text",
-        "tableRef": "cruiserate",
-        "model": "cruiserate",
-        "placeholder": "Enter Cruise Rate",
+        "tableRef": "duration",
+        "placeholder": "Enter Duration",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": ""
+        "url": "",
+        "model": "duration"
     },{
+        "name": "Price",
+        "type": "text",
+        "tableRef": "price",
+        "placeholder": "Enter Price",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "price"
+    }, {
         "name": "City",
         "type": "selectFromTable",
         "option":"single",
@@ -54,53 +52,47 @@
         "validation": ["required", "trim", "unique"],
         "url": "City/search"
     },{
-        "name": "Date",
-        "type": "date",
-        "tableRef": "date",
-        "model": "date",
-        "placeholder": "Enter Date",
-        "id": "input1",
+        "name": "Status",
+        "type": "select",
+        "tableRef": "status",
+        "placeholder": "Enter status",
+        "id": "input3",
+        "model": "status",
         "validation": ["required", "trim", "unique"],
-        "url": ""
+        "url": [{
+            "value": true,
+            "name": "Enable"
+        }, {
+            "value": false,
+            "name": "Disable"
+        }]
     }],
     "action": [{
         "name": "submit",
-        "action": "submitWhatsNew"
+        "action": "submitPackage"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewWhatsHot'})"
+        "stateName": "page({jsonName:'viewPackage'})"
     }],
     "apiCall": {
-        "url": "WhatsHot/save",
+        "url": "Package/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "WhatsHot/getOne",
+        "url": "Package/getOne",
         "params": "_id"
     },
     "sidemenu": [{
-          "name": "WhatsHot",
+          "name": "Destination",
           "action": "sidemenuRedirect",
-          "jsonPage": "editWhatsHot",
+          "jsonPage": "editDestination",
           "fieldsToSend": [1],
-          "callFindOne": "WhatsHot/getOne"
+          "callFindOne": "Destination/getOne"
       }, {
-          "name": "Images",
+          "name": "Package Details",
           "action": "sidemenuRedirect",
-          "jsonPage": "viewImages",
+          "jsonPage": "viewPack",
           "fieldsToSend": [1],
-          "callFindOne": "WhatsHot/getImages"
-      },{
-          "name": "Video",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewVideos",
-          "fieldsToSend": [1],
-          "callFindOne": "WhatsHot/getVideos"
-      }, {
-          "name": "Pricing",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewPricing",
-          "fieldsToSend": [1],
-          "callFindOne": "WhatsHot/getPricing"
+          "callFindOne": "Destination/getPack"
       }]
 }

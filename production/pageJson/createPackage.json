@@ -1,33 +1,43 @@
 {
-    "title": "Create PopularPost",
-    "jsonPage": "viewPopularPost",
+    "title": "Create Package",
+    "jsonPage": "viewPackage",
     "desciption": "",
     "pageType": "create",
     "fields": [{
-        "name": "Name",
+        "name": "Package Name",
         "type": "text",
         "tableRef": "name",
-        "placeholder": "Enter Name",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
-        "name": "Image",
-        "type": "image",
-        "tableRef": "image",
-        "placeholder": "Enter Image",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
-        "name": "Date",
-        "type": "date",
-        "tableRef": "date",
-        "placeholder": "Enter Image",
+        "placeholder": "Enter name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
+        "name": "Duration",
+        "type": "text",
+        "tableRef": "duration",
+        "placeholder": "Enter Duration",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Price",
+        "type": "text",
+        "tableRef": "price",
+        "placeholder": "Enter Price",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "City",
+        "type": "selectFromTable",
+        "option":"single",
+        "tableRef": "city",
+        "dropDownName":"cityName",
+        "placeholder": "Enter Category-Name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "City/search"
+    }, {
         "name": "Status",
         "type": "select",
         "tableRef": "status",
@@ -44,13 +54,13 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitUser"
+        "action": "submitPackage"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewPopularPost'})"
+        "stateName": "page({jsonName:'viewPackage'})"
     }],
 
     "apiCall": {
-        "url": "PopularPost/savedata"
+        "url": "Package/save"
     }
 }

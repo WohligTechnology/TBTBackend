@@ -1,25 +1,26 @@
 {
-    "title": "View Blogs",
+    "title": "Package",
     "desciption": "",
+    "sendIdWithCreate": true,
     "pageType": "view",
     "fields": [{
         "name": "Name",
-        "type": "text",
+        "type":"text",
         "isSort": "",
         "tableRef": "name"
-    }, {
-        "name": "Image",
-        "type": "image",
-        "isSort": "",
-        "tableRef": "image"
     },{
-        "name": "Video",
-        "type": "text",
+        "name": "Duration",
+        "type":"text",
         "isSort": "",
-        "tableRef": "video"
+        "tableRef": "duration"
+    },{
+        "name": "Price",
+        "type":"text",
+        "isSort": "",
+        "tableRef": "price"
     },{
         "name": "Status",
-        "type": "text",
+        "type": "status",
         "isSort": "",
         "tableRef": "status"
     }],
@@ -28,25 +29,25 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editBlog",
+        "jsonPage": "editPackage",
         "fieldsToSend": ["_id"],
-        "callFindOne": "blog/getone"
+        "callFindOne": "Package/getone"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Blog",
-        "content": "Are you sure you want to delete Blog?",
-        "api": "blog/delete",
+        "title": "Delete Package",
+        "content": "Are you sure you want to delete Package?",
+        "api": "Package/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "Blog/getLimited",
+        "url": "Package/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createBlog'})"
+    "createButtonState": "page({jsonName:'createPackage'})"
 }

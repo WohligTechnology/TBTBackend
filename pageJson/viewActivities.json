@@ -9,15 +9,14 @@
         "isSort": "",
         "tableRef": "name"
     }, {
-        "name": "Image1",
+        "name": "Image",
         "type": "image",
         "isSort": "",
         "tableRef": "image1"
     },{
-        "name": "Image2",
-        "type": "image",
+        "name": "Status",
         "isSort": "",
-        "tableRef": "image2"
+        "tableRef": "status"
     }],
     "action": [{
         "name": "edit",
