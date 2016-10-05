@@ -22,18 +22,29 @@
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model": "name"
-    },{
+    }, {
         "name": "Banner",
         "type": "image",
         "tableRef": "banner",
         "model": "banner",
         "option": "single",
-        "size":"1920 X 963",
+        "size": "1920 X 963",
         "placeholder": "Enter Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
+        "name": "Image",
+        "type": "image",
+        "tableRef": "image",
+        "model": "image",
+        "option": "single",
+        "size": "413 X 413",
+        "placeholder": "Enter Image",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, , {
         "name": "Cruise Rate",
         "type": "text",
         "tableRef": "cruiserate",
@@ -42,27 +53,45 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
         "name": "City",
         "type": "selectFromTable",
-        "option":"single",
+        "option": "single",
         "tableRef": "city",
-        "dropDownName":"cityName",
-        "model":"city",
+        "dropDownName": "cityName",
+        "model": "city",
         "placeholder": "Enter Category-Name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "City/search"
-    },{
-        "name": "Date",
+    }, {
+        "name": "From Date",
         "type": "date",
-        "tableRef": "date",
-        "model": "date",
-        "placeholder": "Enter Date",
+        "tableRef": "fromDate",
+        "model": "fromDate",
+        "placeholder": "Enter fromDate",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
+        "name": "To Date",
+        "type": "date",
+        "tableRef": "toDate",
+        "model": "toDate",
+        "placeholder": "Enter toDate",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Location",
+        "type": "text",
+        "tableRef": "location",
+        "model": "location",
+        "placeholder": "Enter location",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
         "name": "Status",
         "type": "select",
         "tableRef": "status",
@@ -76,6 +105,21 @@
         }, {
             "value": false,
             "name": "Disable"
+        }]
+    }, {
+        "name": "Show On Home",
+        "type": "select",
+        "tableRef": "isHome",
+        "model": "isHome",
+        "placeholder": "Enter ishome",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": true,
+            "name": "Yes"
+        }, {
+            "value": false,
+            "name": "No"
         }]
     }],
     "action": [{
@@ -94,28 +138,28 @@
         "params": "_id"
     },
     "sidemenu": [{
-          "name": "WhatsHot",
-          "action": "sidemenuRedirect",
-          "jsonPage": "editWhatsHot",
-          "fieldsToSend": [1],
-          "callFindOne": "WhatsHot/getOne"
-      }, {
-          "name": "Images",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewImages",
-          "fieldsToSend": [1],
-          "callFindOne": "WhatsHot/getImages"
-      },{
-          "name": "Video",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewVideos",
-          "fieldsToSend": [1],
-          "callFindOne": "WhatsHot/getVideos"
-      }, {
-          "name": "Pricing",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewPricing",
-          "fieldsToSend": [1],
-          "callFindOne": "WhatsHot/getPricing"
-      }]
+        "name": "WhatsHot",
+        "action": "sidemenuRedirect",
+        "jsonPage": "editWhatsHot",
+        "fieldsToSend": [1],
+        "callFindOne": "WhatsHot/getOne"
+    }, {
+        "name": "Images",
+        "action": "sidemenuRedirect",
+        "jsonPage": "viewImages",
+        "fieldsToSend": [1],
+        "callFindOne": "WhatsHot/getImages"
+    }, {
+        "name": "Video",
+        "action": "sidemenuRedirect",
+        "jsonPage": "viewVideos",
+        "fieldsToSend": [1],
+        "callFindOne": "WhatsHot/getVideos"
+    }, {
+        "name": "Pricing",
+        "action": "sidemenuRedirect",
+        "jsonPage": "viewPricing",
+        "fieldsToSend": [1],
+        "callFindOne": "WhatsHot/getPricing"
+    }]
 }
