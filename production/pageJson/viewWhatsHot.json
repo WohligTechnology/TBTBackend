@@ -15,6 +15,10 @@
         "name": "CruiseRate",
         "isSort": "",
         "tableRef": "cruiserate"
+    },{
+        "name": "Status",
+        "isSort": "",
+        "tableRef": "status"
     }],
     "action": [{
         "name": "edit",

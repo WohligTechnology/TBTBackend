@@ -12,27 +12,35 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
-        "name": "Image",
+    }, {
+        "name": "Activity Description",
+        "type": "textarea",
+        "tableRef": "description",
+        "placeholder": "Enter Description",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Small Image",
         "type": "image",
-        "option":"single",
+        "option": "single",
         "size": "413 x 413",
         "tableRef": "image1",
         "placeholder": "Enter name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
-        "name": "Above Image",
+    }, {
+        "name": "Big Image",
         "type": "image",
-        "option":"single",
+        "option": "single",
         "size": "1297 x 641",
         "tableRef": "image2",
         "placeholder": "Enter name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
+    }, {
         "name": "Category-Name",
         "type": "select",
         "tableRef": "type",
@@ -45,20 +53,34 @@
         }, {
             "value": "day",
             "name": "day"
-        },{
+        }, {
             "value": "night",
             "name": "night"
         }]
-    },{
+    }, {
         "name": "City",
         "type": "selectFromTable",
-        "option":"single",
+        "option": "single",
         "tableRef": "city",
-        "dropDownName":"cityName",
+        "dropDownName": "cityName",
         "placeholder": "Enter Category-Name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "City/search"
+    }, {
+        "name": "Status",
+        "type": "select",
+        "tableRef": "status",
+        "placeholder": "Enter status",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": true,
+            "name": "Enable"
+        }, {
+            "value": false,
+            "name": "Disable"
+        }]
     }],
     "action": [{
         "name": "submit",
