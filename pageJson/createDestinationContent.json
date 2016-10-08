@@ -1,0 +1,58 @@
+{
+    "title": "Create DestinationContent",
+    "jsonPage": "viewDestinationContent",
+    "desciption": "",
+    "pageType": "create",
+    "fields": [{
+        "name": "Name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Description",
+        "type": "textarea",
+        "tableRef": "description",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "DestinationTitle",
+        "type": "selectFromTable",
+        "option": "single",
+        "tableRef": "destinationTitle",
+        "dropDownName": "title",
+        "placeholder": "Enter Category-Name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "DestinationTitle/search"
+    },{
+        "name": "Status",
+        "type": "select",
+        "tableRef": "status",
+        "placeholder": "Enter Type",
+        "id": "input3",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": true,
+            "name": "Enable"
+        }, {
+            "value": false,
+            "name": "Disable"
+        }]
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitDestinationContent"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewDestinationContent'})"
+    }],
+
+    "apiCall": {
+        "url": "DestinationContent/save"
+    }
+}

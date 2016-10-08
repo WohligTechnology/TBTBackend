@@ -137,24 +137,5 @@
     "preApi": {
         "url": "Destination/getOne",
         "params": "_id"
-    },
-    "sidemenu": [{
-        "name": "Destination",
-        "action": "sidemenuRedirect",
-        "jsonPage": "editDestination",
-        "fieldsToSend": [1],
-        "callFindOne": "Destination/getOne"
-    }, {
-        "name": "Accomodation",
-        "action": "sidemenuRedirect",
-        "jsonPage": "viewAccomodation",
-        "fieldsToSend": [1],
-        "callFindOne": "Destination/getAccomodation"
-    }, {
-        "name": "Content",
-        "action": "sidemenuRedirect",
-        "jsonPage": "viewContent",
-        "fieldsToSend": [1],
-        "callFindOne": "Destination/getContent"
-    }]
+    }
 }

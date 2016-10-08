@@ -1,0 +1,43 @@
+{
+    "title": "View DestinationTitle",
+    "desciption": "",
+    "sendIdWithCreate": true,
+    "pageType": "view",
+    "fields": [{
+        "name": "Title",
+        "type": "text",
+        "isSort": "",
+        "tableRef": "title"
+    },{
+        "name": "Status",
+        "type": "status",
+        "isSort": "",
+        "tableRef": "status"
+    }],
+    "action": [{
+        "name": "edit",
+        "icon": "mode_edit",
+        "color": "blue",
+        "action": "redirect",
+        "jsonPage": "editDestinationTitle",
+        "fieldsToSend": ["_id"],
+        "callFindOne": "DestinationTitle/getOne"
+    }, {
+        "name": "delete",
+        "icon": "delete",
+        "color": "red",
+        "action": "apiCallConfirm",
+        "title": "Delete DestinationTitle",
+        "content": "Are you sure you want to delete DestinationTitle?",
+        "api": "DestinationTitle/delete",
+        "fieldsToSend": [{
+            "name": "_id",
+            "value": "_id"
+        }]
+    }],
+    "apiCall": {
+        "url": "DestinationTitle/search",
+        "params": ""
+    },
+    "createButtonState": "page({jsonName:'createDestinationTitle'})"
+}
