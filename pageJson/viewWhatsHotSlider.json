@@ -3,9 +3,9 @@
     "desciption": "",
     "pageType": "view",
     "fields": [{
-        "name": "Name",
+        "name": "Url",
         "isSort": "",
-        "tableRef": "name"
+        "tableRef": "url"
     },{
         "name": "Banner",
         "type": "image",
@@ -21,25 +21,25 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editWhatsHot",
+        "jsonPage": "editWhatsHotSlider",
         "fieldsToSend": ["_id"],
-        "callFindOne": "WhatsHot/getone"
+        "callFindOne": "WhatsHotSlider/getone"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
         "title": "Delete Tag",
-        "content": "Are you sure you want to delete WhatsHot?",
-        "api": "WhatsHot/delete",
+        "content": "Are you sure you want to delete WhatsHotSlider?",
+        "api": "WhatsHotSlider/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "WhatsHot/search",
+        "url": "WhatsHotSlider/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createWhatsHot'})"
+    "createButtonState": "page({jsonName:'createWhatsHotSlider'})"
 }

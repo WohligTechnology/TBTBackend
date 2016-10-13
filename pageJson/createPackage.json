@@ -4,6 +4,26 @@
     "desciption": "",
     "pageType": "create",
     "fields": [{
+        "name": "Banner",
+        "type": "image",
+        "tableRef": "banner",
+        "option": "single",
+        "size": "..",
+        "placeholder": "Enter Image",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Image",
+        "type": "image",
+        "tableRef": "image",
+        "option": "single",
+        "size": "..",
+        "placeholder": "Enter Image",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
         "name": "Package Name",
         "type": "text",
         "tableRef": "name",
@@ -28,15 +48,15 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
-        "name": "City",
+        "name": "Destination",
         "type": "selectFromTable",
-        "option":"single",
-        "tableRef": "city",
-        "dropDownName":"cityName",
+        "option":"multiple",
+        "tableRef": "destination",
+        "dropDownName":"name",
         "placeholder": "Enter Category-Name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": "City/search"
+        "url": "Destination/search"
     }, {
         "name": "Status",
         "type": "select",

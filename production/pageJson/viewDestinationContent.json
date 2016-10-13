@@ -1,18 +1,16 @@
 {
-    "title": "What's Hot",
+    "title": "View DestinationContent",
     "desciption": "",
+    "sendIdWithCreate": true,
     "pageType": "view",
     "fields": [{
         "name": "Name",
+        "type": "text",
         "isSort": "",
         "tableRef": "name"
     },{
-        "name": "Banner",
-        "type": "image",
-        "isSort": "",
-        "tableRef": "banner"
-    },{
         "name": "Status",
+        "type": "status",
         "isSort": "",
         "tableRef": "status"
     }],
@@ -21,25 +19,25 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editWhatsHot",
+        "jsonPage": "editDestinationContent",
         "fieldsToSend": ["_id"],
-        "callFindOne": "WhatsHot/getone"
+        "callFindOne": "DestinationContent/getOne"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Tag",
-        "content": "Are you sure you want to delete WhatsHot?",
-        "api": "WhatsHot/delete",
+        "title": "Delete DestinationContent",
+        "content": "Are you sure you want to delete DestinationContent?",
+        "api": "DestinationContent/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "WhatsHot/search",
+        "url": "DestinationContent/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createWhatsHot'})"
+    "createButtonState": "page({jsonName:'createDestinationContent'})"
 }

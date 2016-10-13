@@ -1,40 +1,31 @@
 {
-    "title": "Create Pack",
-    "jsonPage": "viewPack",
+    "title": "Create DestinationTitle",
+    "jsonPage": "viewDestinationTitle",
     "desciption": "",
     "pageType": "create",
-    "urlFields": ["Package"],
     "fields": [{
-        "name": "Image",
-        "type": "image",
-        "tableRef": "image",
-        "option": "single",
-        "size": "width = 413",
-        "placeholder": "Enter Image",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    },{
-        "name": "Day",
+        "name": "Title",
         "type": "text",
-        "tableRef": "day",
+        "tableRef": "title",
         "placeholder": "Enter name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    },{
-        "name": "Description",
-        "type": "tinymce",
-        "tableRef": "description",
-        "placeholder": "Enter Description",
+    }, {
+        "name": "Destination",
+        "type": "selectFromTable",
+        "option": "single",
+        "tableRef": "destination",
+        "dropDownName": "name",
+        "placeholder": "Enter Category-Name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": ""
+        "url": "Destination/search"
     },{
         "name": "Status",
         "type": "select",
         "tableRef": "status",
-        "placeholder": "Enter status",
+        "placeholder": "Enter Type",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": [{
@@ -47,13 +38,13 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitPack"
+        "action": "submitDestinationTitle"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewPack'})"
+        "stateName": "page({jsonName:'viewDestinationTitle'})"
     }],
 
     "apiCall": {
-        "url": "Package/savePack"
+        "url": "DestinationTitle/save"
     }
 }

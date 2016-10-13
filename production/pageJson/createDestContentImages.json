@@ -1,37 +1,20 @@
 {
-    "title": "Create HomeSlider",
-    "jsonPage": "viewHomeSlider",
+    "title": "Create Images",
+    "jsonPage": "viewImages",
     "desciption": "",
     "pageType": "create",
+    "urlFields": ["DestinationContent"],
     "fields": [{
         "name": "Image",
         "type": "image",
+        "option":"single",
+        "size": "1920 X 1080",
         "tableRef": "image",
-        "option": "single",
-        "size": "1920 x 670",
         "placeholder": "Enter Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
-        "name": "Mobile Image",
-        "type": "image",
-        "tableRef": "image2",
-        "option": "single",
-        "size": "1920 x 670",
-        "placeholder": "Enter Image",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    },{
-        "name": "URL",
-        "type": "text",
-        "tableRef": "url",
-        "placeholder": "Enter URL",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
         "name": "Status",
         "type": "select",
         "tableRef": "status",
@@ -48,13 +31,13 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitUser"
+        "action": "submitImages"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewHomeSlider'})"
+        "stateName": "page({jsonName:'viewDestContentImages'})"
     }],
 
     "apiCall": {
-        "url": "HomeSlider/save"
+        "url": "DestinationContent/saveImages"
     }
 }

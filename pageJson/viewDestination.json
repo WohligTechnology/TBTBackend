@@ -12,11 +12,6 @@
         "isSort": "",
         "tableRef": "banner"
     },{
-        "name": "Image",
-        "type": "image",
-        "isSort": "",
-        "tableRef": "image"
-    },{
         "name": "Status",
         "type":"status",
         "isSort": "",

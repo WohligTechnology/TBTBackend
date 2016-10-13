@@ -1,6 +1,6 @@
 {
-    "title": "Edit Pack",
-    "jsonPage": "viewPack",
+    "title": "Edit Images",
+    "jsonPage": "viewImages",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -16,46 +16,43 @@
     },{
         "name": "Image",
         "type": "image",
+        "option":"single",
+        "size": "1920 X 1080",
         "tableRef": "image",
-        "model": "image",
-        "option": "single",
-        "size": "width = 413",
-        "placeholder": "Enter Image",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    },{
-        "name": "Day",
-        "type": "text",
-        "tableRef": "day",
         "placeholder": "Enter name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model":"day"
+        "model": "image"
     },{
-        "name": "Description",
-        "type": "tinymce",
-        "tableRef": "description",
-        "placeholder": "Enter Description",
-        "id": "input1",
+        "name": "Status",
+        "type": "select",
+        "tableRef": "status",
+        "placeholder": "Enter status",
+        "id": "input3",
+        "model": "status",
         "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model":"description"
+        "url": [{
+            "value": true,
+            "name": "Enable"
+        }, {
+            "value": false,
+            "name": "Disable"
+        }]
     }],
     "action": [{
         "name": "submit",
-        "action": "submitOnePack"
+        "action": "submitOneAccomodation"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewPack'})"
+        "stateName": "page({jsonName:'viewDestContentImages'})"
     }],
     "apiCall": {
-        "url": "Package/savePack",
+        "url": "DestinationContent/saveImages",
         "params": "_id"
     },
     "preApi": {
-        "url": "Package/getOnePack",
+        "url": "DestinationContent/getOneImages",
         "params": "_id"
     }
 }

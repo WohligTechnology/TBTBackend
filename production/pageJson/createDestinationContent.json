@@ -1,40 +1,39 @@
 {
-    "title": "Create Pack",
-    "jsonPage": "viewPack",
+    "title": "Create DestinationContent",
+    "jsonPage": "viewDestinationContent",
     "desciption": "",
     "pageType": "create",
-    "urlFields": ["Package"],
     "fields": [{
-        "name": "Image",
-        "type": "image",
-        "tableRef": "image",
-        "option": "single",
-        "size": "width = 413",
-        "placeholder": "Enter Image",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    },{
-        "name": "Day",
+        "name": "Name",
         "type": "text",
-        "tableRef": "day",
+        "tableRef": "name",
         "placeholder": "Enter name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
         "name": "Description",
-        "type": "tinymce",
+        "type": "textarea",
         "tableRef": "description",
-        "placeholder": "Enter Description",
+        "placeholder": "Enter name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
+    }, {
+        "name": "DestinationTitle",
+        "type": "selectFromTable",
+        "option": "single",
+        "tableRef": "destinationTitle",
+        "dropDownName": "title",
+        "placeholder": "Enter Category-Name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "DestinationTitle/search"
     },{
         "name": "Status",
         "type": "select",
         "tableRef": "status",
-        "placeholder": "Enter status",
+        "placeholder": "Enter Type",
         "id": "input3",
         "validation": ["required", "trim", "unique"],
         "url": [{
@@ -47,13 +46,13 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitPack"
+        "action": "submitDestinationContent"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewPack'})"
+        "stateName": "page({jsonName:'viewDestinationContent'})"
     }],
 
     "apiCall": {
-        "url": "Package/savePack"
+        "url": "DestinationContent/save"
     }
 }
