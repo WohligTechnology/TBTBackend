@@ -31,7 +31,18 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    }, {
+    },{
+        "name": "Slider Image",
+        "type": "image",
+        "size": "..",
+        "tableRef": "image",
+        "option": "single",
+        "placeholder": "Enter Image",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "image"
+    },{
         "name": "Banner",
         "type": "image",
         "size": "1559 x 586",
@@ -75,10 +86,10 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": [{
-            "value": 1,
+            "value": "Yes",
             "name": "Yes"
         }, {
-            "value": 2,
+            "value": "No",
             "name": "No"
         }]
     }, {

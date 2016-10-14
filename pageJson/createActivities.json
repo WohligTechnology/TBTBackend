@@ -67,6 +67,34 @@
             "value": "night",
             "name": "night"
         }]
+    },{
+        "name": "Type",
+        "type": "select",
+        "tableRef": "popular",
+        "placeholder": "Enter Type",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "None",
+            "name": "None"
+        }, {
+            "value": "Popular Destination",
+            "name": "Popular Destination"
+        }]
+    }, {
+        "name": "Is Slider",
+        "type": "select",
+        "tableRef": "isSlider",
+        "placeholder": "Enter isSlider",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "Yes",
+            "name": "Yes"
+        }, {
+            "value": "No",
+            "name": "No"
+        }]
     }, {
         "name": "Destination",
         "type": "selectFromTable",
