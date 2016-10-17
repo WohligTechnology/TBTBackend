@@ -1,36 +1,20 @@
 {
-    "title": "Create City",
-    "jsonPage": "viewCity",
+    "title": "Create Banner",
+    "jsonPage": "viewBanner",
     "desciption": "",
     "pageType": "create",
     "fields": [{
-        "name": "City Name",
+        "name": "Name",
         "type": "text",
-        "tableRef": "cityName",
-        "placeholder": "Enter City Name",
+        "tableRef": "name",
+        "placeholder": "Enter Banner Name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
-        "name": "Country Name",
-        "type": "text",
-        "tableRef": "country",
-        "placeholder": "Enter City Name",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
-        "name": "Content",
-        "type": "tinymce",
-        "tableRef": "content",
-        "placeholder": "Enter Description",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    },{
-        "name": "Image",
+        "name": "Banner",
         "type": "image",
-        "tableRef": "image",
+        "tableRef": "banner",
         "option": "single",
         "size":"1920 X 963",
         "placeholder": "Enter Image",
@@ -54,13 +38,13 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitCity"
+        "action": "submitBanner"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewCity'})"
+        "stateName": "page({jsonName:'viewBanner'})"
     }],
 
     "apiCall": {
-        "url": "City/save"
+        "url": "Banner/save"
     }
 }

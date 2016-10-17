@@ -1,6 +1,6 @@
 {
-    "title": "Edit City",
-    "jsonPage": "viewCity",
+    "title": "Edit Accomodation",
+    "jsonPage": "viewBanner",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -14,37 +14,19 @@
         "url": "",
         "model": "_id"
     },{
-        "name": "City Name",
+        "name": "Name",
         "type": "text",
-        "tableRef": "cityName",
-        "placeholder": "Enter City Name",
+        "tableRef": "name",
+        "placeholder": "Enter Banner Name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "cityName"
+        "model": "name"
     },{
-        "name": "Country Name",
-        "type": "text",
-        "tableRef": "country",
-        "placeholder": "Enter City Name",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "country"
-    }, {
-        "name": "Content",
-        "type": "tinymce",
-        "tableRef": "content",
-        "model": "content",
-        "placeholder": "Enter Description",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    },{
-        "name": "Image",
+        "name": "Banner",
         "type": "image",
-        "tableRef": "image",
-        "model": "image",
+        "tableRef": "banner",
+        "model": "banner",
         "option": "single",
         "size":"1920 X 963",
         "placeholder": "Enter Image",
@@ -69,17 +51,17 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitCIty"
+        "action": "submitBanner"
     }, {
         "name": "cancel",
-        "stateName": "page({jsonName:'viewCity'})"
+        "stateName": "page({jsonName:'viewBanner'})"
     }],
     "apiCall": {
-        "url": "City/save",
+        "url": "Banner/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "City/getOne",
+        "url": "Banner/getOne",
         "params": "_id"
     }
 }

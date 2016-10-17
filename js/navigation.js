@@ -36,6 +36,11 @@ var navigationservice = angular.module('navigationservice', [])
         classis: "active",
         link: "#/page/viewDestinationContent",
         subnav: []
+    },{
+        name: "Accomodation Banner",
+        classis: "active",
+        link: "#/page/viewBanner",
+        subnav: []
     }, {
         name: "What's Hot",
         classis: "active",
@@ -55,6 +60,16 @@ var navigationservice = angular.module('navigationservice', [])
         name: "Media",
         classis: "active",
         link: "#/page/viewMedia",
+        subnav: []
+    },{
+        name: "Cart",
+        classis: "active",
+        link: "#/page/viewCart",
+        subnav: []
+    },{
+        name: "Enquire",
+        classis: "active",
+        link: "#/page/viewEnquire",
         subnav: []
     }];
 

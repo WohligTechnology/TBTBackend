@@ -19,8 +19,9 @@
           <div class="flex search-bar" flex="33" style="display:inline-block; vertical-align:top; width: 37%; text-align:right;">
               <md-autocomplete md-search-text="pagination.search" md-items="result in json.tableData track by $index" md-min-length="0" md-search-text-change="getMoreResults();" placeholder="Search" class="layout-lg" style="display:inline-block;">
               </md-autocomplete>
-              <a class="add-position" ui-sref="{{json.createButtonState}}" ng-hide="json.title=='All Newsletters' || json.title=='All Contacts' || json.title=='All Notification'">
-                  <md-button class="md-fab md-primary md-mini" aria-label="Add Users">
+              <a class="add-position" ui-sref="{{json.createButtonState}}" ng-hide="json.title=='All Newsletters' || json.title=='All Contacts' || json.title=='All Notification'" >
+                  <md-button class="md-fab md-primary md-mini" aria-label="Add Users" ng-if="json.title!=='Cart'">
+
                       <md-icon class="fa fa-plus plus-icon"></md-icon>
                   </md-button>
               </a>
@@ -78,7 +79,7 @@
     </md-list>
 
     <a class="add-position" ui-sref="{{json.createButtonState}}" ng-hide="json.title=='All Newsletters' || json.title=='All Contacts' || json.title=='All Notification'">
-        <md-button class="md-fab md-fab-bottom-right md-primary" aria-label="Add Users">
+        <md-button class="md-fab md-fab-bottom-right md-primary" aria-label="Add Users" ng-if="json.title!=='Cart'">
             <md-icon class="fa fa-plus plus-icon"></md-icon>
         </md-button>
     </a>

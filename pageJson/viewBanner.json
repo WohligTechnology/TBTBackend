@@ -1,21 +1,18 @@
 {
-    "title": "View DestinationTitle",
+    "title": "Banner",
     "desciption": "",
-    "sendIdWithCreate": true,
     "pageType": "view",
     "fields": [{
-        "name": "Title",
-        "type": "text",
+        "name": "Name",
         "isSort": "",
-        "tableRef": "title"
+        "tableRef": "name"
     },{
-        "name": "Thumbnail",
+        "name": "Banner",
         "type": "image",
         "isSort": "",
-        "tableRef": "thumbnail"
+        "tableRef": "banner"
     },{
         "name": "Status",
-        "type": "status",
         "isSort": "",
         "tableRef": "status"
     }],
@@ -24,25 +21,25 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editDestinationTitle",
+        "jsonPage": "editBanner",
         "fieldsToSend": ["_id"],
-        "callFindOne": "DestinationTitle/getOne"
+        "callFindOne": "Banner/getone"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete DestinationTitle",
-        "content": "Are you sure you want to delete DestinationTitle?",
-        "api": "DestinationTitle/delete",
+        "title": "Delete Tag",
+        "content": "Are you sure you want to delete Banner?",
+        "api": "Banner/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "DestinationTitle/search",
+        "url": "Banner/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createDestinationTitle'})"
+    "createButtonState": "page({jsonName:'createBanner'})"
 }

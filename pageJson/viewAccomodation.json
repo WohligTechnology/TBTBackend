@@ -13,6 +13,11 @@
         "type": "image",
         "isSort": "",
         "tableRef": "image"
+    },{
+        "name": "Status",
+        "type": "text",
+        "isSort": "",
+        "tableRef": "status"
     }],
     "action": [{
         "name": "edit",
@@ -21,7 +26,7 @@
         "action": "redirect",
         "jsonPage": "editAccomodation",
         "fieldsToSend": ["_id"],
-        "callFindOne": "Accomodation/getOneAccomodation"
+        "callFindOne": "Destination/getOneAccomodation"
     }, {
         "name": "delete",
         "icon": "delete",
@@ -52,18 +57,5 @@
           "jsonPage": "viewAccomodation",
           "fieldsToSend": [1],
           "callFindOne": "Destination/getAccomodation"
-      },{
-          "name": "Activities",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewActivities",
-          "fieldsToSend": [1],
-          "callFindOne": "Destination/getActivities"
-      },{
-            "name": "Content",
-            "action": "sidemenuRedirect",
-            "jsonPage": "viewContent",
-            "fieldsToSend": [1],
-            "callFindOne": "Destination/getContent"
-        }]
-
+      }]
 }

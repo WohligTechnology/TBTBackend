@@ -22,6 +22,17 @@
         "validation": ["required", "trim", "unique"],
         "url": "",
         "model":"title"
+    },{
+        "name": "Thumbnail",
+        "type": "image",
+        "option":"single",
+        "size": "..",
+        "tableRef": "thumbnail",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "thumbnail"
     }, {
         "name": "Destination",
         "type": "selectFromTable",
