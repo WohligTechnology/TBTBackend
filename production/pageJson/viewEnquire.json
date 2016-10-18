@@ -1,46 +1,44 @@
 {
-    "title": "Destination",
+    "title": "Enquire",
     "desciption": "",
     "pageType": "view",
     "fields": [{
-        "name": "Name",
+        "name":"Name",
         "isSort": "",
         "tableRef": "name"
     },{
-        "name": "Banner",
-        "type": "image",
+        "name":"Email",
         "isSort": "",
-        "tableRef": "banner"
+        "tableRef": "email"
     },{
-        "name": "Status",
-        "type":"status",
+        "name":"Activities",
         "isSort": "",
-        "tableRef": "status"
+        "tableRef": "activities"
     }],
     "action": [{
         "name": "edit",
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editDestination",
+        "jsonPage": "editEnquire",
         "fieldsToSend": ["_id"],
-        "callFindOne": "Destination/getone"
+        "callFindOne": "Enquire/getone"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete Tag",
-        "content": "Are you sure you want to delete Destination?",
-        "api": "Destination/delete",
+        "title": "Delete Enquire",
+        "content": "Are you sure you want to delete Enquire?",
+        "api": "Enquire/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "Destination/search",
+        "url": "Enquire/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createDestination'})"
+    "createButtonState": "page({jsonName:'createEnquire'})"
 }

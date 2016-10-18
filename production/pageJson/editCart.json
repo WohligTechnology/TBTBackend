@@ -1,0 +1,81 @@
+{
+    "title": "Edit Cart",
+    "jsonPage": "viewCart",
+    "desciption": "",
+    "pageType": "edit",
+    "urlFields": ["_id"],
+    "fields": [{
+        "name": "Id",
+        "type": "hidden",
+        "tableRef": "_id",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "_id"
+    },{
+        "name": "name",
+        "type": "text",
+        "tableRef": "name",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "name"
+    },{
+        "name": "Email",
+        "type": "text",
+        "tableRef": "email",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "email"
+    },{
+        "name": "Mobile",
+        "type": "text",
+        "tableRef": "mobile",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "mobile"
+    },{
+        "name": "Group Size",
+        "type": "text",
+        "tableRef": "groupSize",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "groupSize"
+    }],
+    "action": [{
+        "name": "submit",
+        "action": "submitDoctor"
+    }, {
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewCart'})"
+    }],
+    "apiCall": {
+        "url": "Cart/save",
+        "params": "_id"
+    },
+    "preApi": {
+        "url": "Cart/getOne",
+        "params": "_id"
+    },
+    "sidemenu": [{
+          "name": "Cart",
+          "action": "sidemenuRedirect",
+          "jsonPage": "editCart",
+          "fieldsToSend": [1],
+          "callFindOne": "Cart/getOne"
+      }, {
+          "name": "MyCart",
+          "action": "sidemenuRedirect",
+          "jsonPage": "viewMyCart",
+          "fieldsToSend": [1],
+          "callFindOne": "Cart/getMyCart"
+      }]
+}

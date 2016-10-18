@@ -14,7 +14,7 @@
         "url": ""
     }, {
         "name": "Activity Description",
-        "type": "textarea",
+        "type": "tinymce",
         "tableRef": "description",
         "placeholder": "Enter Description",
         "id": "input1",
@@ -24,7 +24,7 @@
         "name": "Small Image",
         "type": "image",
         "option": "single",
-        "size": "413 x 413",
+        "size": "545 x 413",
         "tableRef": "image1",
         "placeholder": "Enter name",
         "id": "input1",
@@ -41,6 +41,16 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
+        "name": "For Destination Page",
+        "type": "image",
+        "option": "single",
+        "size": "545 x 413",
+        "tableRef": "image3",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
         "name": "Category-Name",
         "type": "select",
         "tableRef": "type",
@@ -57,16 +67,44 @@
             "value": "night",
             "name": "night"
         }]
+    },{
+        "name": "Type",
+        "type": "select",
+        "tableRef": "popular",
+        "placeholder": "Enter Type",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "None",
+            "name": "None"
+        }, {
+            "value": "Popular Destination",
+            "name": "Popular Destination"
+        }]
     }, {
-        "name": "City",
+        "name": "Is Slider",
+        "type": "select",
+        "tableRef": "isSlider",
+        "placeholder": "Enter isSlider",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": [{
+            "value": "Yes",
+            "name": "Yes"
+        }, {
+            "value": "No",
+            "name": "No"
+        }]
+    }, {
+        "name": "Destination",
         "type": "selectFromTable",
-        "option": "single",
-        "tableRef": "city",
-        "dropDownName": "cityName",
+        "option":"multiple",
+        "tableRef": "destination",
+        "dropDownName":"name",
         "placeholder": "Enter Category-Name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": "City/search"
+        "url": "Destination/search"
     }, {
         "name": "Status",
         "type": "select",

@@ -11,6 +11,16 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
+    },{
+        "name": "Thumbnail",
+        "type": "image",
+        "option":"single",
+        "size": "50 X 50",
+        "tableRef": "thumbnail",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
     }, {
         "name": "Destination",
         "type": "selectFromTable",

@@ -13,6 +13,11 @@
         "type": "image",
         "isSort": "",
         "tableRef": "image"
+    },{
+        "name": "Status",
+        "type": "status",
+        "isSort": "",
+        "tableRef": "status"
     }],
     "action": [{
         "name": "edit",

@@ -14,6 +14,28 @@
         "url": "",
         "model": "_id"
     }, {
+        "name": "Banner",
+        "type": "image",
+        "tableRef": "banner",
+        "option": "single",
+        "size": "1632 X 562",
+        "placeholder": "Enter Image",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "banner"
+    },{
+        "name": "Image",
+        "type": "image",
+        "tableRef": "image",
+        "option": "single",
+        "size": "545 x 413",
+        "placeholder": "Enter Image",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "image"
+    },{
         "name": "Package Name",
         "type": "text",
         "tableRef": "name",
@@ -41,16 +63,16 @@
         "url": "",
         "model": "price"
     }, {
-        "name": "City",
+        "name": "Destination",
         "type": "selectFromTable",
-        "option":"single",
-        "tableRef": "city",
-        "dropDownName":"cityName",
-        "model":"city",
+        "option":"multiple",
+        "tableRef": "destination",
+        "dropDownName":"name",
+        "model":"destination",
         "placeholder": "Enter Category-Name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": "City/search"
+        "url": "Destination/search"
     },{
         "name": "Status",
         "type": "select",

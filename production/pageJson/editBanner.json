@@ -1,6 +1,6 @@
 {
     "title": "Edit Accomodation",
-    "jsonPage": "viewAccomodation",
+    "jsonPage": "viewBanner",
     "desciption": "",
     "pageType": "edit",
     "urlFields": ["_id"],
@@ -14,25 +14,25 @@
         "url": "",
         "model": "_id"
     },{
-        "name": "Hotel Name",
+        "name": "Name",
         "type": "text",
-        "tableRef": "hotelName",
-        "placeholder": "Enter name",
+        "tableRef": "name",
+        "placeholder": "Enter Banner Name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": "",
-        "model": "hotelName"
+        "model": "name"
     },{
-        "name": "Image",
+        "name": "Banner",
         "type": "image",
-        "option":"single",
-        "size": "545 x 413",
-        "tableRef": "image",
-        "placeholder": "Enter name",
+        "tableRef": "banner",
+        "model": "banner",
+        "option": "single",
+        "size":"1632 X 562",
+        "placeholder": "Enter Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "image"
+        "url": ""
     },{
         "name": "Status",
         "type": "select",
@@ -51,16 +51,17 @@
     }],
     "action": [{
         "name": "submit",
-        "action": "submitOneAccomodation"
+        "action": "submitBanner"
     }, {
-        "name": "cancel"
+        "name": "cancel",
+        "stateName": "page({jsonName:'viewBanner'})"
     }],
     "apiCall": {
-        "url": "Destination/saveAccomodation",
+        "url": "Banner/save",
         "params": "_id"
     },
     "preApi": {
-        "url": "Destination/getOneAccomodation",
+        "url": "Banner/getOne",
         "params": "_id"
     }
 }

@@ -16,7 +16,7 @@
         "type": "image",
         "tableRef": "banner",
         "option": "single",
-        "size": "1920 X 963",
+        "size": "1632 × 562",
         "placeholder": "Enter Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
@@ -26,29 +26,29 @@
         "type": "image",
         "tableRef": "image",
         "option": "single",
-        "size": "413 X 413",
+        "size": "929 × 450",
+        "placeholder": "Enter Image",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    }, {
+        "name": "Table Image",
+        "type": "image",
+        "tableRef": "tableImage",
+        "option": "single",
+        "size": "900 x 500",
         "placeholder": "Enter Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
         "name": "Cruise Rate",
-        "type": "text",
+        "type": "tinymce",
         "tableRef": "cruiserate",
         "placeholder": "Enter Cruise Rate",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    }, {
-        "name": "City",
-        "type": "selectFromTable",
-        "option": "single",
-        "tableRef": "city",
-        "dropDownName": "cityName",
-        "placeholder": "Enter Category-Name",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": "City/search"
     }, {
         "name": "From Date",
         "type": "date",

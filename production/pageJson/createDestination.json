@@ -20,26 +20,26 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
+        "name": "Slider Image",
+        "type": "image",
+        "size": "545 x 413",
+        "tableRef": "image",
+        "option": "single",
+        "placeholder": "Enter Image",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
         "name": "Banner",
         "type": "image",
-        "size": "1559 x 586",
+        "size": "1827 X 674",
         "tableRef": "image",
         "option": "single",
         "placeholder": "Enter Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    }, {
-        "name": "Image",
-        "type": "image",
-        "size": "429 X 401",
-        "tableRef": "image",
-        "option": "single",
-        "placeholder": "Enter Image",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": ""
-    }, {
+    },{
         "name": "Video Url",
         "type": "text",
         "tableRef": "video",
@@ -47,16 +47,6 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": ""
-    }, {
-        "name": "City",
-        "type": "selectFromTable",
-        "option": "single",
-        "tableRef": "city",
-        "dropDownName": "cityName",
-        "placeholder": "Enter Category-Name",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": "City/search"
     }, {
         "name": "Type",
         "type": "select",
@@ -70,9 +60,6 @@
         }, {
             "value": "Popular Destination",
             "name": "Popular Destination"
-        }, {
-            "value": "Popular Attraction",
-            "name": "Popular Attraction"
         }]
     }, {
         "name": "Is Slider",
@@ -82,10 +69,10 @@
         "id": "input1",
         "validation": ["required", "trim", "unique"],
         "url": [{
-            "value": 1,
+            "value": "Yes",
             "name": "Yes"
         }, {
-            "value": 2,
+            "value": "No",
             "name": "No"
         }]
     }, {

@@ -1,21 +1,18 @@
 {
-    "title": "View DestinationTitle",
+    "title": "What's Hot",
     "desciption": "",
-    "sendIdWithCreate": true,
     "pageType": "view",
     "fields": [{
-        "name": "Title",
-        "type": "text",
+        "name": "Url",
         "isSort": "",
-        "tableRef": "title"
+        "tableRef": "url"
     },{
-        "name": "Thumbnail",
+        "name": "Banner",
         "type": "image",
         "isSort": "",
-        "tableRef": "thumbnail"
+        "tableRef": "banner"
     },{
         "name": "Status",
-        "type": "status",
         "isSort": "",
         "tableRef": "status"
     }],
@@ -24,25 +21,25 @@
         "icon": "mode_edit",
         "color": "blue",
         "action": "redirect",
-        "jsonPage": "editDestinationTitle",
+        "jsonPage": "editWhatsHotSlider",
         "fieldsToSend": ["_id"],
-        "callFindOne": "DestinationTitle/getOne"
+        "callFindOne": "WhatsHotSlider/getone"
     }, {
         "name": "delete",
         "icon": "delete",
         "color": "red",
         "action": "apiCallConfirm",
-        "title": "Delete DestinationTitle",
-        "content": "Are you sure you want to delete DestinationTitle?",
-        "api": "DestinationTitle/delete",
+        "title": "Delete Tag",
+        "content": "Are you sure you want to delete WhatsHotSlider?",
+        "api": "WhatsHotSlider/delete",
         "fieldsToSend": [{
             "name": "_id",
             "value": "_id"
         }]
     }],
     "apiCall": {
-        "url": "DestinationTitle/search",
+        "url": "WhatsHotSlider/search",
         "params": ""
     },
-    "createButtonState": "page({jsonName:'createDestinationTitle'})"
+    "createButtonState": "page({jsonName:'createWhatsHotSlider'})"
 }
