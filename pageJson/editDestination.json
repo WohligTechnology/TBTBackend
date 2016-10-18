@@ -34,7 +34,7 @@
     },{
         "name": "Slider Image",
         "type": "image",
-        "size": "..",
+        "size": "545 x 413",
         "tableRef": "image",
         "option": "single",
         "placeholder": "Enter Image",
@@ -45,7 +45,7 @@
     },{
         "name": "Banner",
         "type": "image",
-        "size": "1559 x 586",
+        "size": "1827 X 674",
         "tableRef": "banner",
         "option": "single",
         "placeholder": "Enter Image",

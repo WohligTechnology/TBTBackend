@@ -37,7 +37,7 @@ var navigationservice = angular.module('navigationservice', [])
         link: "#/page/viewDestinationContent",
         subnav: []
     },{
-        name: "Accomodation Banner",
+        name: "Common Banner",
         classis: "active",
         link: "#/page/viewBanner",
         subnav: []

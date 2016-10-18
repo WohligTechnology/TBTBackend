@@ -15,7 +15,7 @@
     },{
         "name": "Image",
         "type": "image",
-        "size": "413 x 413",
+        "size": "545 x 413",
         "option": "single",
         "tableRef": "image",
         "placeholder": "Enter Image",

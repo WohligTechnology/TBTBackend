@@ -26,7 +26,7 @@
         "name": "Thumbnail",
         "type": "image",
         "option":"single",
-        "size": "..",
+        "size": "50 X 50",
         "tableRef": "thumbnail",
         "placeholder": "Enter name",
         "id": "input1",

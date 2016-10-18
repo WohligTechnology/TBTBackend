@@ -25,17 +25,6 @@
         "url": "",
         "model": "image"
     },{
-        "name": "Mobile Image",
-        "type": "image",
-        "tableRef": "image2",
-        "option": "single",
-        "size": "1920 x 670",
-        "placeholder": "Enter Image",
-        "id": "input1",
-        "validation": ["required", "trim", "unique"],
-        "url": "",
-        "model": "image2"
-    },{
         "name": "URL",
         "type": "text",
         "tableRef": "url",

@@ -26,7 +26,7 @@
         "name": "Image",
         "type": "image",
         "option":"single",
-        "size": "413 x 413",
+        "size": "545 x 413",
         "tableRef": "image",
         "placeholder": "Enter name",
         "id": "input1",

@@ -8,7 +8,7 @@
         "name": "Image",
         "type": "image",
         "option":"single",
-        "size": "413 x 413",
+        "size": "1920 X 1080",
         "tableRef": "image",
         "placeholder": "Enter Image",
         "id": "input1",

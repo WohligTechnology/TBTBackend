@@ -57,11 +57,5 @@
           "jsonPage": "viewVideos",
           "fieldsToSend": [1],
           "callFindOne": "WhatsHot/getVideos"
-      }, {
-          "name": "Pricing",
-          "action": "sidemenuRedirect",
-          "jsonPage": "viewPricing",
-          "fieldsToSend": [1],
-          "callFindOne": "WhatsHot/getPricing"
       }]
 }

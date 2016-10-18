@@ -16,7 +16,7 @@
         "type": "image",
         "tableRef": "banner",
         "option": "single",
-        "size": "1632 × 562",
+        "size": "1559 X 586",
         "placeholder": "Enter Image",
         "id": "input1",
         "validation": ["required", "trim", "unique"],
