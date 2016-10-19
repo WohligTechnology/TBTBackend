@@ -33,7 +33,7 @@
         "name": "Banner",
         "type": "image",
         "size": "1827 X 674",
-        "tableRef": "image",
+        "tableRef": "banner",
         "option": "single",
         "placeholder": "Enter Image",
         "id": "input1",

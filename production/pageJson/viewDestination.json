@@ -31,7 +31,7 @@
         "color": "red",
         "action": "apiCallConfirm",
         "title": "Delete Tag",
-        "content": "Are you sure you want to delete Tag?",
+        "content": "Are you sure you want to delete Destination?",
         "api": "Destination/delete",
         "fieldsToSend": [{
             "name": "_id",
