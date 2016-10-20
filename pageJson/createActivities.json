@@ -41,6 +41,14 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     }, {
+        "name": "Order",
+        "type": "text",
+        "tableRef": "order",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
         "name": "For Destination Page",
         "type": "image",
         "option": "single",

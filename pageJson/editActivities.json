@@ -54,6 +54,15 @@
         "url": "",
         "model": "image2"
     }, {
+        "name": "Order",
+        "type": "text",
+        "tableRef": "order",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": "",
+        "model": "order"
+    },{
         "name": "For Destination Page",
         "type": "image",
         "option": "single",

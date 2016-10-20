@@ -246,20 +246,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             // call api for view data
             $scope.apiName = $scope.json.apiCall.url;
 
-            var pageno = 1;
-            console.log($stateParams.no);
-            if ($stateParams.no) {
-                pageno = parseInt($stateParams.no);
-            }
-            $scope.pagination = {
-                "search": "",
-                "pagenumber": pageno,
-                "pagesize": 10
-            };
-            console.log($scope.pagination);
+
             // SIDE MENU DATA
 
-            $scope.pagination1 = {};
             if (urlid1) {
                 console.log('urlid1', urlid1);
                 if ($scope.json.sendIdWithCreate) {
@@ -295,9 +284,11 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             }
             // call api for view data
             $scope.apiName = $scope.json.apiCall.url;
-            $scope.pageInfo = {
-                totalitems: 100
+            $scope.pageInfo = {};
+            $scope.pagination = {
+              pagesize:5
             };
+
             $scope.getMoreResults = function(value) {
                 if (value) {
                     console.log($scope.pagination);
@@ -311,10 +302,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                         console.log(findData);
                         if (findData.value !== false) {
                             if (findData.data && findData.data.results && findData.data.results.length > 0) {
+                                $scope.pageInfo.totalitems =findData.data.total;
+                                $scope.pagenumber=$scope.pageInfo.totalitems/$scope.pagination.pagesize;
+                                console.log("Before",$scope.pagenumber);
+                                $scope.pagination.pagenumber=Math.ceil($scope.pagenumber);
+                                  console.log("After",$scope.pagenumber);
+                                console.log($scope.pageInfo.size);
+
+
+
+
                                 $scope.pageInfo.lastpage = findData.data.totalpages;
+
                                 $scope.pageInfo.pagenumber = findData.data.pagenumber;
-                                $scope.pageInfo.totalitems = $scope.pagination.pagesize * findData.data.totalpages;
                                 $scope.json.tableData = findData.data.results;
+
                             } else {
                                 $scope.json.tableData = [];
                             }
