@@ -1,8 +1,9 @@
 {
-    "title": "Images",
+    "title": "View Images",
     "desciption": "",
-    "pageType": "view",
     "sendIdWithCreate": true,
+    "pageType": "view",
+
     "fields": [{
         "name": "Image",
         "type": "image",
@@ -52,7 +53,7 @@
           "fieldsToSend": [1],
           "callFindOne": "WhatsHot/getImages"
       },{
-          "name": "Video",
+          "name": "Videos",
           "action": "sidemenuRedirect",
           "jsonPage": "viewVideos",
           "fieldsToSend": [1],

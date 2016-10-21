@@ -24,9 +24,17 @@
         "validation": ["required", "trim", "unique"],
         "url": ""
     },{
-        "name": "Package Name",
+        "name": "Title 1",
         "type": "text",
-        "tableRef": "name",
+        "tableRef": "title1",
+        "placeholder": "Enter name",
+        "id": "input1",
+        "validation": ["required", "trim", "unique"],
+        "url": ""
+    },{
+        "name": "Title 2",
+        "type": "text",
+        "tableRef": "title2",
         "placeholder": "Enter name",
         "id": "input1",
         "validation": ["required", "trim", "unique"],

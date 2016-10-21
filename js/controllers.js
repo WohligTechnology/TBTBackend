@@ -21,7 +21,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             // });
             if (data.value === true) {
                 $state.go("page", {
-                    jsonName: "viewHomeSlider"
+                    jsonName: "viewHome"
                 });
                 $.jStorage.set("user", data);
             } else if (data.value === false) {
@@ -246,9 +246,20 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             // call api for view data
             $scope.apiName = $scope.json.apiCall.url;
 
-
+            var pageno = 1;
+            console.log($stateParams.no);
+            if ($stateParams.no) {
+                pageno = parseInt($stateParams.no);
+            }
+            $scope.pagination = {
+                "search": "",
+                "pagenumber": pageno,
+                "pagesize": 10
+            };
+            console.log($scope.pagination);
             // SIDE MENU DATA
 
+            $scope.pagination1 = {};
             if (urlid1) {
                 console.log('urlid1', urlid1);
                 if ($scope.json.sendIdWithCreate) {
@@ -257,6 +268,7 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                     // $scope.json.createButtonState = $scope.json.createButtonState.split("%25A2").join("%A2");
                 }
                 console.log($scope.json.createButtonState);
+                console.log($scope.json);
                 $scope.api1 = $scope.json.sidemenu[1].callFindOne;
                 if ($scope.json.sidemenu[1].sendParam && $scope.json.sidemenu[1].sendParam !== '') {
                     // ARRAY
@@ -284,11 +296,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             }
             // call api for view data
             $scope.apiName = $scope.json.apiCall.url;
-            $scope.pageInfo = {};
-            $scope.pagination = {
-              pagesize:5
+            $scope.pageInfo = {
+                totalitems: 100
             };
-
             $scope.getMoreResults = function(value) {
                 if (value) {
                     console.log($scope.pagination);
@@ -302,21 +312,10 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
                         console.log(findData);
                         if (findData.value !== false) {
                             if (findData.data && findData.data.results && findData.data.results.length > 0) {
-                                $scope.pageInfo.totalitems =findData.data.total;
-                                $scope.pagenumber=$scope.pageInfo.totalitems/$scope.pagination.pagesize;
-                                console.log("Before",$scope.pagenumber);
-                                $scope.pagination.pagenumber=Math.ceil($scope.pagenumber);
-                                  console.log("After",$scope.pagenumber);
-                                console.log($scope.pageInfo.size);
-
-
-
-
                                 $scope.pageInfo.lastpage = findData.data.totalpages;
-
                                 $scope.pageInfo.pagenumber = findData.data.pagenumber;
+                                $scope.pageInfo.totalitems = $scope.pagination.pagesize * findData.data.totalpages;
                                 $scope.json.tableData = findData.data.results;
-
                             } else {
                                 $scope.json.tableData = [];
                             }
